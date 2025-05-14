@@ -23,19 +23,19 @@
 
 @section('sidebar')
 <li class="nav-item">
-    <a href="#" class="nav-link active">
-        <i class="nav-icon bi bi-speedometer"></i>
+    <a href="{{ route('pasien.dashboard') }}" class="nav-link active">
+        <i class="nav-icon bi bi bi-house"></i>
             <p> Dashboard </p>
     </a>
 </li>
 <li class="nav-item">
-    <a href="#" class="nav-link active">
-        <i class="nav-icon bi bi-speedometer"></i>
+    <a href="{{ route('pasien.periksa.index') }}" class="nav-link active">
+        <i class="nav-icon bi bi-bandaid-fill"></i>
         <p> Periksa </p>
     </a>
 </li>
 <li class="nav-item">
-    <a href="#" class="nav-link active">
+    <a href="{{ route('pasien.riwayat.index') }}" class="nav-link active">
         <i class="nav-icon bi bi-speedometer"></i>
             <p> Riwayat </p>
     </a>

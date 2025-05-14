@@ -20,50 +20,17 @@
     </div>
 </div>
 @endsection
-@section('content')
-<!-- Form Input Obat -->
-<div class="card card-primary card-outline mb-4">
-  <!--begin::Header-->
-  <div class="card-header">
-    <div class="card-title">Quick Example</div>
-  </div>
-  <!--end::Header-->
-
-  <!--begin::Form-->
-  <form>
-    <!--begin::Body-->
-    <div class="card-body">
-      <div class="mb-3">
-        <label for="nama_obat" class="form-label">Nama Anda</label>
-        <input type="text" class="form-control" id="nama_obat">
-
-        <label for="dokter" class="form-label mt-3">Dokter</label>
-        <input type="text" class="form-control" id="dokter">
-      </div>
-    </div>
-    <!--end::Body-->
-
-    <!--begin::Footer-->
-    <div class="card-footer">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-    <!--end::Footer-->
-  </form>
-  <!--end::Form-->
-</div>
-
-@endsection
 
 @section('sidebar')
 <li class="nav-item">
-    <a href="#" class="nav-link active">
+    <a href="{{ route('pasien.dashboard') }}" class="nav-link active">
         <i class="nav-icon bi bi-speedometer"></i>
             <p> Dashboard </p>
     </a>
 </li>
 <li class="nav-item">
     <a href="#" class="nav-link active">
-        <i class="nav-icon bi bi-speedometer"></i>
+        <i class="nav-icon bi bi-bandaid-fill"></i>
         <p> Periksa </p>
     </a>
 </li>
@@ -74,3 +41,49 @@
     </a>
 </li>
 @endsection
+
+
+@section('content')
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Periksa</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nama Anda</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1"
+                                        placeholder="Input your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleSelectRounded0">Pilih Dokter</label>
+                                    <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                        <option>Value 1</option>
+                                        <option>Value 2</option>
+                                        <option>Value 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+@endsection
+

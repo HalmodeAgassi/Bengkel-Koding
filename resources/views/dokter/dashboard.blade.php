@@ -22,22 +22,31 @@
 @endsection
 
 @section('sidebar')
-<li class="nav-item">
-    <a href="#" class="nav-link active">
-        <i class="nav-icon bi bi-speedometer"></i>
-            <p> Dashboard </p>
-    </a>
-</li>
-<li class="nav-item">
-    <a href="#" class="nav-link active">
-        <i class="nav-icon bi bi-speedometer"></i>
-        <p> Periksa </p>
-    </a>
-</li>
-<li class="nav-item">
-    <a href="#" class="nav-link active">
-        <i class="nav-icon bi bi-speedometer"></i>
-            <p> Obat </p>
-    </a>
-</li>
+    <li class="nav-item">
+        <a href="{{ route('dokter.dashboard') }}" class="nav-link active">
+            <i class="nav-icon bi bi-speedometer"></i>
+            <p>
+                Dashboard
+            </p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="{{ route('dokter.periksa.index') }}" class="nav-link">
+            <i class="nav-icon bi bi-speedometer"></i>
+            <p>
+                Periksa
+            </p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="{{ route('dokter.obat.index') }}" class="nav-link">
+            <i class="nav-icon bi bi-speedometer"></i>
+            <p>
+                Obat
+            </p>
+        </a>
+    </li>
+@endsection
+
+@section('content')
 @endsection
